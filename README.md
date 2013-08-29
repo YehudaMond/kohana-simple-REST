@@ -5,7 +5,7 @@
 
 Simple JSON only RESTful controller for Kohana in module form
 
-Built against Kohana 3.3 [http://kohanaframework.org/3.2/guide/]
+Built against Kohana 3.3 [http://kohanaframework.org/3.3/guide/]
 
 Currently it is hardcoded to only respond in JSON (application/json).
 
