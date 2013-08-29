@@ -73,7 +73,7 @@ abstract class Api_Controller extends Kohana_Controller {
         
         if(in_array(strtoupper($method), $this->known_request_methods))
         {
-            $request->action(strtolower($method);
+            $request->action(strtolower($method));
         }
         else
         {
