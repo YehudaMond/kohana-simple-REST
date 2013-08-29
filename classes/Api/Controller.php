@@ -441,7 +441,7 @@ abstract class Api_Controller extends Kohana_Controller {
             $additional
         );
         $this->response->body(json_encode(array('__error' => $error_values)));
-        $this->response->headers('HTTP/1.1', $code . Util_Http::$code_labels[$code]);
+        $this->response->status($code);u
 
     }
 
@@ -530,12 +530,12 @@ abstract class Api_Controller extends Kohana_Controller {
      *
      * @param Request $request
      * @param Response $response
-     * @param int $error_code One of Util_Http::$code_labels
+     * @param int $error_code an HTTP response error code
      * @param string $message
      */
     protected function route_to_error($request, $response, $error_code, $message)
     {
-        $response->headers('HTTP/1.1', $error_code . Util_Http::$code_labels[$error_code]);
+        $response->status($error_code);
         $response->body(
             json_encode(array('__error' => array(
                 '__message' => $message
